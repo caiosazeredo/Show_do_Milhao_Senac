@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <title>Pergunta sobre linguagem Script para Web</title>
+    <title>Quiz sobre Wordpress</title>
     <style>
         body {
             padding: 30px;
@@ -17,25 +17,25 @@
 <body>
 
     <div class="container">
-        <h2>Pergunta sobre linguagem Script para Web</h2>
+        <h2>Quiz sobre Wordpress</h2>
         <hr>
         <div class="question">
-            <p>Qual a função do Angular?</p>
+            <p>O que é o Wordpress?</p>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="answer" id="answer1" value="gameEngine">
-                <label class="form-check-label" for="answer1">Um motor de jogos</label>
+                <input class="form-check-input" type="radio" name="answer" id="answer1" value="Wordpress">
+                <label class="form-check-label" for="answer1">É uma ferramenta de gerenciamento de conteúdo.</label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="answer" id="answer2" value="database">
-                <label class="form-check-label" for="answer2">Uma base de dados</label>
+                <input class="form-check-input" type="radio" name="answer" id="answer2" value="softwareLivre">
+                <label class="form-check-label" for="answer2">É um software desenvolvido e mantido por meio de uma colaboração aberta e disponível e sem custo.</label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="answer" id="answer3" value="webFramework">
-                <label class="form-check-label" for="answer3">Um framework para desenvolvimento web</label>
+                <input class="form-check-input" type="radio" name="answer" id="answer3" value="script">
+                <label class="form-check-label" for="answer3">É o código usado para otimizar processos em sistemas computacionais.</label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="answer" id="answer4" value="os">
-                <label class="form-check-label" for="answer4">Um sistema operacional</label>
+                <input class="form-check-input" type="radio" name="answer" id="answer4" value="java">
+                <label class="form-check-label" for="answer4">É uma linguagem de programação OOP.</label>
             </div>
             <button class="btn btn-primary mt-3" id="checkAnswer">Verificar Resposta</button>
         </div>
@@ -55,14 +55,14 @@
         buttonClickObservable.subscribe(event => {
             const selectedAnswer = document.querySelector('input[name="answer"]:checked').value;
 
-            if (selectedAnswer === "webFramework") {
+            if (selectedAnswer === "Wordpress") {
                 alert('Resposta correta!');
 
-                window.location.href = "pergunta2.html";
+                window.location.href = "pergunta3.html";
             } else {
-                alert('Resposta errada!');
+                alert('Resposta errada! Segue Explicação sobre Wordpress.');
 					
-				window.location.href = "pagina_derrota.html";
+				window.location.href = "explicacao2.html";
             }
         });
     </script>
