@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Explicação da Pergunta</title>
+    <style>
+        body {
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Explicação da Pergunta</h2>
+        <hr>
+        <p>
+            O design responsivo é uma abordagem essencial no desenvolvimento web moderno. Ele visa criar uma experiência
+            de usuário consistente e agradável em uma variedade de dispositivos e tamanhos de tela. Quando um site é
+            desenvolvido com design responsivo em mente, ele se adapta dinamicamente a diferentes resoluções e
+            orientações de tela, proporcionando uma navegação fácil e uma leitura clara, independentemente de o usuário
+            estar acessando o site em um smartphone, tablet, laptop ou desktop.
+        </p>
+        <p>
+            Uma das principais técnicas usadas no design responsivo é o uso de media queries. Media queries são regras
+            CSS que permitem adaptar o estilo de um site com base nas características do dispositivo, como largura da
+            tela, altura da tela e orientação. Ao utilizar media queries de forma inteligente, os desenvolvedores podem
+            criar layouts flexíveis que se ajustam perfeitamente a qualquer tela, desde telas pequenas de smartphones até
+            grandes monitores de desktop.
+        </p>
+        <p>
+            Além disso, o design responsivo também leva em consideração a otimização do desempenho. Sites responsivos
+            geralmente carregam de forma mais eficiente em dispositivos móveis, reduzindo o tempo de carregamento e
+            melhorando a experiência do usuário, especialmente em redes móveis mais lentas.
+        </p>
+        <p>
+            Em resumo, o objetivo fundamental do design responsivo é criar uma experiência de usuário universal, onde os
+            visitantes do site podem desfrutar do conteúdo de forma intuitiva, independentemente do dispositivo que estão
+            usando. Ao implementar design responsivo, os desenvolvedores web podem alcançar um público mais amplo e
+            oferecer uma experiência consistente e agradável a todos os usuários.
+        </p>
+        <a class="btn btn-primary" href="Pergunta17.html">Voltar ao Quiz</a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        const { fromEvent } = rxjs;
+        const button = document.getElementById('checkAnswer');
+
+        const buttonClickObservable = fromEvent(button, 'click');
+
+        buttonClickObservable.subscribe(event => {
+            const selectedAnswer = document.querySelector('input[name="answer"]:checked').value;
+
+            if (selectedAnswer === "webFramework") {
+                alert('Resposta correta!');
+
+                window.location.href = "pergunta18.html";
+            } else {
+                alert('Resposta errada! redirecionando para a explicação');
+					
+				window.location.href = "explicacao.html";
+            }
+        });
+    </script>
+
+</body>
+
+</html>

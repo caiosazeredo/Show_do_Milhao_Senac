@@ -45,7 +45,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/6.6.7/rxjs.umd.min.js"></script>
-
     <script>
         const { fromEvent } = rxjs;
         const button = document.getElementById('checkAnswer');
@@ -60,9 +59,9 @@
 
                 window.location.href = "pergunta18.html";
             } else {
-                alert('Resposta errada!');
+                alert('Resposta errada! redirecionando para a explicação');
 					
-				window.location.href = "pagina_derrota.html";
+				window.location.href = "explicacao.html";
             }
         });
     </script>
