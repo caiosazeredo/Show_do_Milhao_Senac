@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,60 +12,56 @@
         }
     </style>
 </head>
-
 <body>
 
-    <div class="container">
-        <h2>Quiz sobre Virtualização de Computadores</h2>
-        <hr>
-        <div class="question">
-            <p>O que é uma máquina virtual em virtualização de computadores?</p>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="answer" id="answer1" value="correta">
-                <label class="form-check-label" for="answer1">Uma emulação de um sistema de computador, incluindo hardware e software, dentro de outro sistema.</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="answer" id="answer2" value="incorreta1">
-                <label class="form-check-label" for="answer2">Uma cópia de segurança de um sistema de computador.</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="answer" id="answer3" value="incorreta2">
-                <label class="form-check-label" for="answer3">Um servidor de internet.</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="answer" id="answer4" value="incorreta3">
-                <label class="form-check-label" for="answer4">Um tipo de firewall.</label>
-            </div>
-            <button class="btn btn-primary mt-3" id="checkAnswer">Verificar Resposta</button>
+<div class="container">
+    <h2>Quiz sobre Virtualização de Computadores</h2>
+    <hr>
+    <div class="question">
+        <p>O que é uma máquina virtual em virtualização de computadores?</p>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="answer" id="answer1" value="correta">
+            <label class="form-check-label" for="answer1">Uma emulação de um sistema de computador, incluindo hardware e software, dentro de outro sistema.</label>
         </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="answer" id="answer2" value="incorreta1">
+            <label class="form-check-label" for="answer2">Uma cópia de segurança de um sistema de computador.</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="answer" id="answer3" value="incorreta2">
+            <label class="form-check-label" for="answer3">Um servidor de internet.</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="answer" id="answer4" value="incorreta3">
+            <label class="form-check-label" for="answer4">Um tipo de firewall.</label>
+        </div>
+        <button class="btn btn-primary mt-3" id="checkAnswer">Verificar Resposta</button>
     </div>
+</div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/6.6.7/rxjs.umd.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/6.6.7/rxjs.umd.min.js"></script>
 
-    <script>
-        const { fromEvent } = rxjs;
-        const button = document.getElementById('checkAnswer');
+<script>
+    const { fromEvent } = rxjs;
+    const button = document.getElementById('checkAnswer');
 
-        const buttonClickObservable = fromEvent(button, 'click');
+    const buttonClickObservable = fromEvent(button, 'click');
 
-        buttonClickObservable.subscribe(event => {
-            const selectedAnswer = document.querySelector('input[name="answer"]:checked').value;
+    buttonClickObservable.subscribe(event => {
+        const selectedAnswer = document.querySelector('input[name="answer"]:checked');
 
-            if (selectedAnswer === "correta") {
-                alert('Resposta correta!');
-
-                window.location.href = "pergunta2.html";
-            } else {
-                alert('Resposta errada!');
-					
-				window.location.href = "pagina_derrota.html";
-            }
-        });
-    </script>
+        if (selectedAnswer && selectedAnswer.value === "correta") {
+            alert('Resposta correta!');
+            window.location.href = "pergunta6.html";
+        } else {
+            alert('Resposta errada! Redirecionando para a explicação...');
+            window.location.href = "paginaexplicacao.html";
+        }
+    });
+</script>
 
 </body>
-
 </html>
