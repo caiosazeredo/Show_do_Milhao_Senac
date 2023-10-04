@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <title>Quiz sobre Wordpress</title>
+    <title>Quiz sobre Gerenciamento de Dados</title>
     <style>
         body {
             padding: 30px;
@@ -17,25 +17,25 @@
 <body>
 
     <div class="container">
-        <h2>Quiz sobre Wordpress</h2>
+        <h2>Quiz sobre Consulta e Gerenciamento de dados</h2>
         <hr>
         <div class="question">
-            <p>O que é o Wordpress?</p>
+            <p>Qual é a principal finalidade da linguagem SQL (Structured Query Language) em um sistema de gerenciamento de banco de dados?</p>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="answer" id="answer1" value="Wordpress">
-                <label class="form-check-label" for="answer1">É uma ferramenta de gerenciamento de conteúdo.</label>
+                <input class="form-check-input" type="radio" name="answer" id="answer1" value="">
+                <label class="form-check-label" for="answer1">Armazenar arquivos de dados em disco.</label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="answer" id="answer2" value="softwareLivre">
-                <label class="form-check-label" for="answer2">É um software desenvolvido e mantido por meio de uma colaboração aberta e disponível e sem custo.</label>
+                <input class="form-check-input" type="radio" name="answer" id="answer2" value="Ux">
+                <label class="form-check-label" for="answer2">Criar interfaces de usuário para aplicativos.</label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="answer" id="answer3" value="script">
-                <label class="form-check-label" for="answer3">É o código usado para otimizar processos em sistemas computacionais.</label>
+                <input class="form-check-input" type="radio" name="answer" id="answer3" value="Sql">
+                <label class="form-check-label" for="answer3">Consultar e manipular dados armazenados em um banco de dados.</label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="answer" id="answer4" value="java">
-                <label class="form-check-label" for="answer4">É uma linguagem de programação OOP.</label>
+                <input class="form-check-input" type="radio" name="answer" id="answer4" value="">
+                <label class="form-check-label" for="answer4">Gerar relatórios gráficos a partir de dados brutos.</label>
             </div>
             <button class="btn btn-primary mt-3" id="checkAnswer">Verificar Resposta</button>
         </div>
@@ -55,14 +55,14 @@
         buttonClickObservable.subscribe(event => {
             const selectedAnswer = document.querySelector('input[name="answer"]:checked').value;
 
-            if (selectedAnswer === "Wordpress") {
+            if (selectedAnswer === "Sql") {
                 alert('Resposta correta!');
 
-                window.location.href = "pergunta3.html";
+                window.location.href = "Pergunta18";
             } else {
-                alert('Resposta errada! Segue Explicação sobre Wordpress.');
+                alert('Resposta errada!');
 					
-				window.location.href = "explicacao2.html";
+				window.location.href = "pagina_derrota.html";
             }
         });
     </script>

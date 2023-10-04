@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Explicação sobre Wordpress</title>
+    <style>
+        body {
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Explicação sobre Wordpress</h2>
+        <hr>
+        <div class="question">
+            <p>O que é o Wordpress?</p>
+            <div> <p>O WordPress é um sistema para coordenar elementos amplamente utilizado para a criação e manutenção de sites, blogs e outras aplicações online. Ele é uma plataforma de código aberto, o que significa que seu código-fonte é acessível e pode ser modificado por desenvolvedores, tornando-o altamente flexível e personalizável.
+<br><br>
+O WordPress é usado para uma variedade de tipos de sites, desde blogs pessoais até sites de comércio eletrônico e grandes portais de notícias. Sua versatilidade, facilidade de uso e extensibilidade fizeram dele uma escolha popular para a criação de sites em todo o mundo.
+<br><br>
+Aqui estão alguns pontos-chave sobre o WordPress:
+<br><br>
+1 - Publicação de Conteúdo: O WordPress facilita a criação, edição e publicação de conteúdo na web. Você pode escrever artigos, fazer upload de imagens, vídeos e outros tipos de mídia, e agendar postagens para serem publicadas em datas específicas.
+<br><br>
+2 - Personalização: O WordPress oferece uma ampla gama de temas (templates) e plugins que permitem personalizar a aparência e funcionalidade do seu site. Você pode escolher entre milhares de temas gratuitos e premium e adicionar recursos extras com plugins.
+<br><br>
+3 - Blogging: O WordPress foi originalmente concebido como uma plataforma de blogs, e ainda é amplamente usado para esse fim. Ele oferece recursos poderosos para criar e gerenciar blogs, incluindo categorias, tags, comentários, e RSS feeds.
+<br><br>
+4 - Escalabilidade: O WordPress é escalável e pode ser usado para criar sites simples, blogs pessoais, sites corporativos, lojas online, portais de notícias, e muito mais. É usado por uma variedade de organizações, desde blogueiros individuais até grandes empresas.
+<br><br>
+5 - Comunidade Ativa: O WordPress tem uma comunidade de desenvolvedores e usuários muito ativa. Isso significa que você pode encontrar suporte, tutoriais e recursos adicionais online.
+<br><br>
+6 - SEO: O WordPress é considerado amigável para mecanismos de busca (SEO), o que facilita a otimização do seu site para os motores de busca.
+<br><br>
+7 - Atualizações e Segurança: Como uma plataforma de código aberto, o WordPress é constantemente atualizado para melhorar a segurança e a funcionalidade. É importante manter o seu site WordPress atualizado para evitar vulnerabilidades de segurança.
+<br><br>
+8 - Hospedagem: Você pode hospedar um site WordPress em diversos provedores de hospedagem, escolhendo aquele que melhor atende às suas necessidades e orçamento.</p>
+
+            </div>
+            
+            
+           
+			<button class="btn btn-primary mt-3" id="meuBotao">Tente de novo</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/6.6.7/rxjs.umd.min.js"></script>
+
+
+
+    <script>
+   
+    const { fromEvent } = rxjs;
+    const { switchMap } = rxjs.operators;
+
+    const meuBotao = document.getElementById("meuBotao");
+
+    const botaoClick$ = fromEvent(meuBotao, 'click');
+
+    botaoClick$.pipe(
+        switchMap(() => {
+            const url = 'pergunta2.html'; 
+            return window.open(url, 'pergunta2.html');
+        })
+    ).subscribe();
+</script>
+
+
+
+</body>
+
+</html>
