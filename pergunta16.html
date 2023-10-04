@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <title>Pergunta sobre linguagem Script para Web</title>
+    <title>PHP com Banco de Dados</title>
     <style>
         body {
             padding: 30px;
@@ -17,25 +17,25 @@
 <body>
 
     <div class="container">
-        <h2>Pergunta sobre linguagem Script para Web</h2>
+        <h2>Pergunta sobre PHP com Banco de Dados</h2>
         <hr>
         <div class="question">
-            <p>Qual a função do Angular?</p>
+            <p>Qual função do PHP é usada para estabelecer uma conexão com um banco de dados MySQL?</p>
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="answer" id="answer1" value="gameEngine">
-                <label class="form-check-label" for="answer1">Um motor de jogos</label>
+                <label class="form-check-label" for="answer1">mysqli_fetch()</label>
             </div>
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="answer" id="answer2" value="database">
-                <label class="form-check-label" for="answer2">Uma base de dados</label>
+                <label class="form-check-label" for="answer2">mysql_query()</label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="answer" id="answer3" value="webFramework">
-                <label class="form-check-label" for="answer3">Um framework para desenvolvimento web</label>
+                <input class="form-check-input" type="radio" name="answer" id="answer3" value="os">
+                <label class="form-check-label" for="answer3">mysqli_connect()</label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="answer" id="answer4" value="os">
-                <label class="form-check-label" for="answer4">Um sistema operacional</label>
+                <input class="form-check-input" type="radio" name="answer" id="answer4" value="webFramework">
+                <label class="form-check-label" for="answer4">php_db_open()</label>
             </div>
             <button class="btn btn-primary mt-3" id="checkAnswer">Verificar Resposta</button>
         </div>
@@ -58,11 +58,11 @@
             if (selectedAnswer === "webFramework") {
                 alert('Resposta correta!');
 
-                window.location.href = "pergunta2.html";
+                window.location.href = "pergunta17.html";
             } else {
                 alert('Resposta errada!');
 					
-				window.location.href = "pagina_derrota.html";
+				window.location.href = "explicacao16.html";
             }
         });
     </script>
