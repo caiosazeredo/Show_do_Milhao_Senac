@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Quiz sobre Design Responsivo</title>
+    <style>
+        body {
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Quiz sobre Design Responsivo</h2>
+        <hr>
+        <div class="question">
+            <p>Qual é o principal objetivo do design responsivo em desenvolvimento web?</p>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="answer" id="answer1" value="gameEngine">
+                <label class="form-check-label" for="answer1">Aumentar o tempo de carregamento do site.</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="answer" id="answer2" value="database">
+                <label class="form-check-label" for="answer2">Limitar o acesso ao site apenas a usuários de desktop</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="answer" id="answer3" value="webFramework">
+                <label class="form-check-label" for="answer3">Garantir que o site tenha uma aparência e funcionalidade adequadas em diferentes dispositivos e tamanhos de tela</</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="answer" id="answer4" value="os">
+                <label class="form-check-label" for="answer4">Reduzir a qualidade das imagens para economizar largura de banda.</label>
+            </div>
+            <button class="btn btn-primary mt-3" id="checkAnswer">Verificar Resposta</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/6.6.7/rxjs.umd.min.js"></script>
+
+    <script>
+        const { fromEvent } = rxjs;
+        const button = document.getElementById('checkAnswer');
+
+        const buttonClickObservable = fromEvent(button, 'click');
+
+        buttonClickObservable.subscribe(event => {
+            const selectedAnswer = document.querySelector('input[name="answer"]:checked').value;
+
+            if (selectedAnswer === "webFramework") {
+                alert('Resposta correta!');
+
+                window.location.href = "pergunta18.html";
+            } else {
+                alert('Resposta errada!');
+					
+				window.location.href = "pagina_derrota.html";
+            }
+        });
+    </script>
+
+</body>
+
+</html>
