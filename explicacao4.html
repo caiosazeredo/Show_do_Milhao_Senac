@@ -6,66 +6,115 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <title>Pergunta 4</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Explicação pergunta 4</title>
     <style>
         body {
             padding: 30px;
+            background-color: black;
         }
 
-        #erro1{
-            color:red;
+        .navbar {
+            background-color: #002c5e;
+            text-align: center;
+            padding: 10px 0;
         }
 
-        #erro2{
-            color:red;
+        .navbar h1 {
+            color: #fff;
+            font-size: 35px;
+            margin: 0;
         }
 
-        #erro3{
-            color:red;
+        .navbar ul {
+            list-style-type: none;
+            padding: 0;
         }
 
-        #acerto{
-            color:rgb(0, 144, 0);
+        .navbar li {
+            display: inline-block;
+            margin: 0 10px;
         }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 25px;
+        }
+
+        .p{
+            font-size: 30px;
+        }
+
+    .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(189, 187, 187);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.993);
+    }
+
+    .card {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .card img {
+    max-width: 100%;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    }
     </style>
 </head>
 
 <body>
 
-    <div class="container">
-        <h2>Pergunta 4</h2>
-        <hr>
-        <div class="question">
-            <p>Quais vantagens de servidor em nuvem?</p>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="answer" id="answer1" value="gameEngine">
-                <label class="form-check-label" for="answer1" id="erro1"><s>Estabilidade maior na rede</s></label>
-            </div>
-
-            <p>Servidor em nuvem não altera estabilidade da rede, sendo esta determinada por outros fatores</p>
-
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="answer" id="answer2" value="database">
-                <label class="form-check-label" for="answer2" id="erro2"><s>Gastor reduzidos</s></label>
-            </div>
-
-            <p>Servidor em nuvem ou local não determinam em si o preço para mantê-lo, depende da logística</p>
-
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="answer" id="answer3" value="webFramework">
-                <label class="form-check-label" for="answer3" id="erro3"><s>Uso sem precisar de internet</s></label>
-            </div>
-
-            <p>O servidor em nuvem precisa internet para ser usado pelo usuário, uma desvantagem em relação ao servidor local</p>
-
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="answer" id="answer4" value="servidor">
-                <label class="form-check-label" for="answer4" id="acerto">Possibilidade de trabalhar em caso de incendio</label>
-            </div>
-
-            <p>Em caso não apenas de incêndio, um servidor em nuvem não é afetado e, portanto, nesses casos se estabelece uma vantagem desse tipo de servidor</p>
-
+    <div class="navbar">
+        <h1>Explicação pergunta 4 - Quais vantagens de servidor em nuvem?</h1>
     </div>
+
+    <br>
+    <br>
+
+    <div class="container">
+        <div class="card">
+            <img src="imagens/rede-computadores.jpg" alt="Imagem 1">  
+            <h3>Estabilidade na rede</h3>
+            <ul>
+                <li>Servidor local ou não não determina estabilidade da rede</li>
+            </ul>
+        </div>
+        <div class="card">
+            <img src="imagens/economia.pgn.png" alt="Imagem 2">
+            <h3>Gastos reduzidos</h3>
+            <ul>
+                <li>Servidor em nuvem ou local não determinam em si o preço para mantê-lo, depende da logística</li>
+            </ul>
+        </div>
+        <div class="card">
+            <img src="imagens/off.jpeg.jpg" alt="Imagem 2">
+            <h3>Uso sem internet</h3>
+            <ul>
+                <li>O servidor em nuvem precisa internet para ser usado pelo usuário, uma desvantagem em relação ao servidor local</li>
+            </ul>
+        </div>
+        <div class="card">
+            <img src="imagens/incendio.jpg" alt="Imagem 2">
+            <h3>Possibilidade de trabalho em caso de incendio</h3>
+            <ul>
+                <li>Em caso não apenas de incêndio, um servidor em nuvem não é afetado e, portanto, nesses casos se estabelece uma vantagem desse tipo de servidor</li>
+            </ul>
+        </div>
+      </div>
+
+      <br>
+      <a href='Pergunta4.html'><button type="button" class="btn btn-primary btn-lg">Responder Novamente</button></a>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>

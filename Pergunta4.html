@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Pergunta 4</title>
+    <style>
+        body {
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Pergunta 4</h2>
+        <hr>
+        <div class="question">
+            <p>Quais vantagens de servidor em nuvem?</p>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="answer" id="answer1" value="gameEngine">
+                <label class="form-check-label" for="answer1">Estabilidade maior na rede</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="answer" id="answer2" value="database">
+                <label class="form-check-label" for="answer2">Gastor reduzidos</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="answer" id="answer3" value="webFramework">
+                <label class="form-check-label" for="answer3">Uso sem precisar de internet</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="answer" id="answer4" value="servidor">
+                <label class="form-check-label" for="answer4">Possibilidade de trabalhar em caso de incendio</label>
+            </div>
+            <button class="btn btn-primary mt-3" id="checkAnswer">Verificar Resposta</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/6.6.7/rxjs.umd.min.js"></script>
+
+    <script>
+        const { fromEvent } = rxjs;
+        const button = document.getElementById('checkAnswer');
+
+        const buttonClickObservable = fromEvent(button, 'click');
+
+        buttonClickObservable.subscribe(event => {
+            const selectedAnswer = document.querySelector('input[name="answer"]:checked').value;
+
+            if (selectedAnswer === "servidor") {
+                alert('Resposta correta!');
+
+                window.location.href = "pergunta5.html";
+            } else {
+                alert('Resposta errada!');
+					
+				window.location.href = "explicacao4.html";
+            }
+        });
+    </script>
+
+</body>
+
+</html>
