@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>O que Significa TCP?</title>
+    <style>
+        body {
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Pergunta sobre O que é TCP?</h2>
+        <hr>
+        <div class="question">
+            <p>O que significa TCP?</p>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="answer" id="answer1" value="a">
+                <label class="form-check-label" for="answer1">a) Transmission Control Protocol</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="answer" id="answer2" value="b">
+                <label class="form-check-label" for="answer2">b) Total Control Protocol</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="answer" id="answer3" value="c">
+                <label class="form-check-label" for="answer3">c) Transport Control Protocol</label>
+            </div>
+            
+            <button class="btn btn-primary mt-3" id="checkAnswer">Verificar Resposta</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/6.6.7/rxjs.umd.min.js"></script>
+
+    <script>
+        const { fromEvent } = rxjs;
+        const button = document.getElementById('checkAnswer');
+
+        const buttonClickObservable = fromEvent(button, 'click');
+
+        buttonClickObservable.subscribe(event => {
+            const selectedAnswer = document.querySelector('input[name="answer"]:checked').value;
+
+            if (selectedAnswer === "a") {
+                alert('Resposta correta!');
+
+                window.location.href = "Pergunta8.html";
+            } else {
+                alert('Resposta errada!');
+
+                window.location.href = "explicacao7.html";
+            }
+        });
+    </script>
+
+</body>
+
+</html>
