@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <title>O que Significa TCP?</title>
+    <title>Pergunta sobre linguagem Script para Web</title>
     <style>
         body {
             padding: 30px;
@@ -17,23 +17,26 @@
 <body>
 
     <div class="container">
-        <h2>Pergunta sobre O que é TCP?</h2>
+        <h2>Pergunta sobre linguagem Script para Web</h2>
         <hr>
         <div class="question">
-            <p>O que significa TCP?</p>
+            <p>Qual a função do Angular?</p>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="answer" id="answer1" value="a">
-                <label class="form-check-label" for="answer1">a) Transmission Control Protocol</label>
+                <input class="form-check-input" type="radio" name="answer" id="answer1" value="gameEngine">
+                <label class="form-check-label" for="answer1">Um motor de jogos</label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="answer" id="answer2" value="b">
-                <label class="form-check-label" for="answer2">b) Total Control Protocol</label>
+                <input class="form-check-input" type="radio" name="answer" id="answer2" value="database">
+                <label class="form-check-label" for="answer2">Uma base de dados</label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="answer" id="answer3" value="c">
-                <label class="form-check-label" for="answer3">c) Transport Control Protocol</label>
+                <input class="form-check-input" type="radio" name="answer" id="answer3" value="webFramework">
+                <label class="form-check-label" for="answer3">Um framework para desenvolvimento web</label>
             </div>
-            
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="answer" id="answer4" value="os">
+                <label class="form-check-label" for="answer4">Um sistema operacional</label>
+            </div>
             <button class="btn btn-primary mt-3" id="checkAnswer">Verificar Resposta</button>
         </div>
     </div>
@@ -52,14 +55,14 @@
         buttonClickObservable.subscribe(event => {
             const selectedAnswer = document.querySelector('input[name="answer"]:checked').value;
 
-            if (selectedAnswer === "a") {
+            if (selectedAnswer === "webFramework") {
                 alert('Resposta correta!');
 
-                window.location.href = "Pergunta16.html";
+                window.location.href = "pergunta2.html";
             } else {
                 alert('Resposta errada!');
-
-                window.location.href = "explicacao15.html";
+					
+				window.location.href = "pagina_derrota.html";
             }
         });
     </script>
