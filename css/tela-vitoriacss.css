@@ -1,0 +1,40 @@
+body{
+    width: 100%;
+    height: 100%;
+    min-width: 470px;
+    min-height: 865px;
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url(img/silvio-santos.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+}
+
+.bottom{
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    top: 45em;
+}
+
+a{
+ font-size: 32px;
+ color: rgb(255, 255, 255);
+ text-decoration: none;
+}
+
+
+

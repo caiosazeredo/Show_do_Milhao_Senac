@@ -36,12 +36,6 @@ video{
   animation: quiz .75s linear infinite;
 }
 
-#silvio{
-    position: relative;
-    right: 20em;
-    bottom: 15em;
-
-}
 
 #buttons{
     display: flex;
@@ -67,7 +61,43 @@ video{
     color: black;
 }
 
-.hide {
-    display: none;
+.silvio{
+    position: relative;
+    transform: scaleX(-1);
+    right: 20em;
+    bottom: 15em;
+    -webkit-animation: dance 2.0s linear infinite;
+    -moz-animation: dance 2.0s linear infinite;
+    -ms-animation: dance 2.0s linear infinite;
+    -o-animation: dance 2.0s linear infinite;
+    animation: dance 2.0s linear infinite;
 }
 
+.silvinha{
+    position: relative;
+    transform: scaleX(-1);
+    left: 25em;
+    bottom: 32em;
+    height: 265px;
+    -webkit-animation: dance2 2.0s linear infinite;
+    -moz-animation: dance2 2.0s linear infinite;
+    -ms-animation: dance2 2.0s linear infinite;
+    -o-animation: dance2 2.0s linear infinite;
+    animation: dance2 2.0s linear infinite;
+}
+
+@keyframes dance{
+    0%{right: 23em;}
+    25%{transform: scaleX(-1);}
+    50%{right: 17em;}
+    75%{transform: scaleX(1);}
+    100%{right: 20em;}
+}
+
+@keyframes dance2{
+    0%{left: 28em;}
+    25%{transform: scaleX(-1);}
+    50%{left: 22em;}
+    75%{transform: scaleX(1);}
+    100%{left: 25em;}
+}
