@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet">
+    <title>Show do Senac</title>
+</head>
+<body>
+    <h1 class="quiz">QUIZ</h1>
+        <section id="buttons">
+            <div id="background"></div>
+            <a href="Pergunta1.html">JOGAR</a>
+            <a href="manual.html">REGRAS</a>
+            <img src="img/Silvio.png" alt="silvinho lançando a boa" id="silvio">
+            <audio src="midia/silvio-santos-abertura-show-do-milhao.mp3" loop autoplay type="audio/mpeg"></audio>
+        </section>
+       <script>
+        const video = document.getElementById("myVideo");
+            video.addEventListener("ended", function() {
+            video.classList.add("hide");
+        });
+    </script>  
+</body>
+</html>

@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html{
+    overflow-y: hidden;
+}
+body{
+    background: url("img/fundo.webp") no-repeat;
+    background-size: cover;
+}
+
+video{
+    width: 100%;
+}
+
+@keyframes quiz {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 0; }
+}
+.quiz {
+   font-family:'Train One', cursive;
+   font-weight: 500;
+   font-size: 5em;
+   display: flex;
+   justify-content: center;
+   color: #c879fc;
+   margin: 2em 0;
+  -webkit-animation: quiz .75s linear infinite;
+  -moz-animation: quiz .75s linear infinite;
+  -ms-animation: quiz .75s linear infinite;
+  -o-animation: quiz .75s linear infinite;
+  animation: quiz .75s linear infinite;
+}
+
+#silvio{
+    position: relative;
+    right: 20em;
+    bottom: 15em;
+
+}
+
+#buttons{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+}
+#buttons>a{
+    width: 100px;
+    text-decoration: none;
+    color: plum;
+    padding: 10px;
+    border-radius: 20px;
+    border: solid #c879fc 1px;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1em;
+}
+
+#buttons>a:hover{
+    background-color: #c879fc;
+    color: black;
+}
+
+.hide {
+    display: none;
+}
+
