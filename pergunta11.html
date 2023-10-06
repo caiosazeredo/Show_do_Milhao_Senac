@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pergunta sobre o MS Project</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding: 30px;
+        }
+
+        img {
+            width: 100px;
+            border: 2px solid #000;
+            margin: 10px;
+        }
+
+        p.Titulo {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+        }
+
+        p.pergunta {
+            font-size: 18px;
+            justify-content: center;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <h2>Sobre o MS Project...</h2>
+    <hr>
+    <div id="coracoes">
+        <img src="vida.png" alt="Coração" id="coracao1">
+        <img src="vida.png" alt="Coração" id="coracao2">
+        <img src="vida.png" alt="Coração" id="coracao3">
+    </div>
+    <div class="logo">
+        <img src="MS_Project_Logo.png" alt="Descrição da imagem">
+    </div>
+    <div class="question">
+        <p class="Titulo">Qual é o principal objetivo do Microsoft Project?</p>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="answer" id="answer1" value="PlanilhaC">
+            <label class="form-check-label" for="answer1"><p class="pergunta">Elaborar planilhas complexas</p></label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="answer" id="answer2" value="ProjetoE">
+            <label class="form-check-label" for="answer2"><p class="pergunta">Gerenciar projetos de forma eficaz</p></label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="answer" id="answer3" value="PlanilhaA">
+            <label class="form-check-label" for="answer3"><p class="pergunta">Criar animações para os projetos</p></label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="answer" id="answer4" value="na">
+            <label class="form-check-label" for="answer4"><p class="pergunta">Nenhuma das Alternativas</p></label>
+        </div>
+        <button class="btn btn-primary mt-3" id="checkAnswer">Verificar Resposta</button>
+        <button class="btn btn-primary mt-3" id="Dica">Dica</button>
+    </div>
+    <div id="cronometro">02:05</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/6.6.7/rxjs.umd.min.js"></script>
+
+<script>
+    const { fromEvent } = rxjs;
+    const button = document.getElementById('checkAnswer');
+    const buttonDica = document.getElementById('Dica');
+    const cronometroElemento = document.getElementById('cronometro');
+    let coracoesRestantes = 3; // Inicializa o número de corações
+
+    const buttonClickObservable = fromEvent(button, 'click');
+
+    buttonClickObservable.subscribe(event => {
+        const selectedAnswer = document.querySelector('input[name="answer"]:checked').value;
+
+        if (selectedAnswer === "ProjetoE") {
+            alert('Resposta correta!');
+            window.location.href = "pergunta12.html";
+        } else {
+            alert('Resposta errada!');
+            coracoesRestantes--;
+
+            if (coracoesRestantes <= 0) {
+                window.location.href = "pagina_derrota.html"; // Redirecionar para a página de derrota quando não houver mais corações
+            } else {
+                localStorage.setItem('coracoes', coracoesRestantes); // Salva o estado atual dos corações no localStorage
+                document.getElementById('coracoes').textContent = `Corações: ${coracoesRestantes}`;
+            }
+        }
+    });
+
+    const dicaClickObservable = fromEvent(buttonDica, 'click');
+
+    dicaClickObservable.subscribe(event => {
+        alert('1,50R$ por dica');
+    });
+
+    function atualizarCronometro() {
+        let segundosRestantes = parseInt(cronometroElemento.textContent.split(':')[1]);
+
+        if (segundosRestantes === 0) {
+            clearInterval(intervalId);
+            cronometroElemento.textContent = '00:00'; // Define o cronômetro para 00:00
+            alert('Tempo esgotado! Você perde uma vida.');
+            coracoesRestantes--;
+
+            if (coracoesRestantes <= 0) {
+                window.location.href = "pagina_derrota.html"; // Redirecionar para a página de derrota quando não houver mais corações
+            } else {
+                localStorage.setItem('coracoes', coracoesRestantes); // Salva o estado atual dos corações no localStorage
+                document.getElementById('coracoes').textContent = `Corações: ${coracoesRestantes}`;
+            }
+        } else {
+            segundosRestantes--;
+            cronometroElemento.textContent = `00:${segundosRestantes < 10 ? '0' : ''}${segundosRestantes}`;
+        }
+    }
+
+    const intervalId = setInterval(atualizarCronometro, 1000);
+
+    setTimeout(() => {
+        clearInterval(intervalId);
+        cronometroElemento.textContent = '00:00'; // Define o cronômetro para 00:00
+        alert('Tempo esgotado! Você perdeu um coração.');
+        coracoesRestantes--;
+
+        if (coracoesRestantes <= 0) {
+            window.location.href = "pagina_derrota.html"; // Redirecionar para a página de derrota quando não houver mais corações
+        } else {
+            localStorage.setItem('coracoes', coracoesRestantes); // Salva o estado atual dos corações no localStorage
+            document.getElementById('coracoes').textContent = `Corações: ${coracoesRestantes}`;
+        }
+    }, 30000);
+</script>
+</body>
+</html>
