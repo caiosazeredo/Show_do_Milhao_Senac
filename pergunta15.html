@@ -1,75 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <title>Pergunta sobre TCP</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>O que Significa TCP?</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        h1 {
-            color: #0073e6;
-        }
-        .question {
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
-        .options {
-            list-style-type: none;
-            padding: 0;
-        }
-        .options li {
-            margin-bottom: 10px;
-        }
-        .options input[type="radio"] {
-            margin-right: 10px;
-        }
-        #result {
-            color: green;
-            font-weight: bold;
-            margin-top: 10px;
-            display: none;
+            padding: 30px;
         }
     </style>
 </head>
+
 <body>
-    <h1>Pergunta sobre TCP</h1>
-    <div class="question">
-        <p>O que significa TCP?</p>
+
+    <div class="container">
+        <h2>Pergunta sobre O que é TCP?</h2>
+        <hr>
+        <div class="question">
+            <p>O que significa TCP?</p>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="answer" id="answer1" value="a">
+                <label class="form-check-label" for="answer1">a) Transmission Control Protocol</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="answer" id="answer2" value="b">
+                <label class="form-check-label" for="answer2">b) Total Control Protocol</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="answer" id="answer3" value="c">
+                <label class="form-check-label" for="answer3">c) Transport Control Protocol</label>
+            </div>
+            
+            <button class="btn btn-primary mt-3" id="checkAnswer">Verificar Resposta</button>
+        </div>
     </div>
-    <form id="quizForm">
-        <ul class="options">
-            <li>
-                <input type="radio" name="answer" value="a">a) Transmission Control Protocol</li>
-            <li>
-                <input type="radio" name="answer" value="b">b) Total Control Protocol</li>
-            <li>
-                <input type="radio" name="answer" value="c">c) Transport Control Protocol</li>
-        </ul>
-        <br>
-        <input type="submit" value="Verificar Resposta">
-    </form>
-    <div id="result"></div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/6.6.7/rxjs.umd.min.js"></script>
 
     <script>
-        document.getElementById('quizForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            var selectedAnswer = document.querySelector('input[name="answer"]:checked');
-            if (selectedAnswer) {
-                var result = document.getElementById('result');
-                if (selectedAnswer.value === 'a') {
-                    result.style.color = 'green';
-                    result.textContent = 'Resposta correta! TCP significa Transmission Control Protocol.';
-                    window.location.href = "pergunta16.html";
-                } else {
-                    alert('Resposta errada!');
+        const { fromEvent } = rxjs;
+        const button = document.getElementById('checkAnswer');
 
-                 window.location.href = "explicacao15.html";
-            }
-                result.style.display = 'block';
+        const buttonClickObservable = fromEvent(button, 'click');
+
+        buttonClickObservable.subscribe(event => {
+            const selectedAnswer = document.querySelector('input[name="answer"]:checked').value;
+
+            if (selectedAnswer === "a") {
+                alert('Resposta correta!');
+
+                window.location.href = "Pergunta16.html";
+            } else {
+                alert('Resposta errada!');
+
+                window.location.href = "explicacao15.html";
             }
         });
     </script>
+
 </body>
+
 </html>
