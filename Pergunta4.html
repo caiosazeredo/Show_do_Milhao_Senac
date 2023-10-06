@@ -20,22 +20,22 @@
         <h2>Pergunta 4</h2>
         <hr>
         <div class="question">
-            <p>Quais vantagens de servidor em nuvem?</p>
+            <p>Qual é a principal finalidade do serviço DNS (Domain Name System) em uma infraestrutura de servidores?</p>
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="answer" id="answer1" value="gameEngine">
-                <label class="form-check-label" for="answer1">Estabilidade maior na rede</label>
+                <label class="form-check-label" for="answer1">Gerenciar o tráfego de rede entre servidores</label>
             </div>
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="answer" id="answer2" value="database">
-                <label class="form-check-label" for="answer2">Gastor reduzidos</label>
+                <label class="form-check-label" for="answer2">Armazenar backups de dados do servidor</label>
             </div>
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="answer" id="answer3" value="webFramework">
-                <label class="form-check-label" for="answer3">Uso sem precisar de internet</label>
+                <label class="form-check-label" for="answer3">Traduzir nomes de domínio em endereços IP</label>
             </div>
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="answer" id="answer4" value="servidor">
-                <label class="form-check-label" for="answer4">Possibilidade de trabalhar em caso de incendio</label>
+                <label class="form-check-label" for="answer4">Realizar análises de segurança de servidor em tempo real</label>
             </div>
             <button class="btn btn-primary mt-3" id="checkAnswer">Verificar Resposta</button>
         </div>
@@ -55,7 +55,7 @@
         buttonClickObservable.subscribe(event => {
             const selectedAnswer = document.querySelector('input[name="answer"]:checked').value;
 
-            if (selectedAnswer === "servidor") {
+            if (selectedAnswer === "webFramework") {
                 alert('Resposta correta!');
 
                 window.location.href = "Pergunta5.html";
