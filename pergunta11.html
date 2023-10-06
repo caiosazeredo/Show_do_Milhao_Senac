@@ -44,27 +44,27 @@
         <img src="MS_Project_Logo.png" alt="Descrição da imagem">
     </div>
     <div class="question">
-        <p class="Titulo">Qual é o principal objetivo do Microsoft Project?</p>
+        <p class="Titulo">No Microsoft Project, o que é uma "linha de base"?</p>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="answer" id="answer1" value="PlanilhaC">
-            <label class="form-check-label" for="answer1"><p class="pergunta">Elaborar planilhas complexas</p></label>
+            <input class="form-check-input" type="radio" name="answer" id="answer1" value="Certa">
+            <label class="form-check-label" for="answer1"><p class="pergunta">Uma ferramenta para criar gráficos de Gantt.</p></label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="answer" id="answer2" value="ProjetoE">
-            <label class="form-check-label" for="answer2"><p class="pergunta">Gerenciar projetos de forma eficaz</p></label>
+            <input class="form-check-input" type="radio" name="answer" id="answer2" value="EstimativaI">
+            <label class="form-check-label" for="answer2"><p class="pergunta"> Uma estimativa inicial de custos do projeto.</p></label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="answer" id="answer3" value="PlanilhaA">
-            <label class="form-check-label" for="answer3"><p class="pergunta">Criar animações para os projetos</p></label>
+            <input class="form-check-input" type="radio" name="answer" id="answer3" value="ConjuntoV">
+            <label class="form-check-label" for="answer3"><p class="pergunta">Um conjunto de valores planejados para datas de início, término, custos e recursos.</p></label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="answer" id="answer4" value="na">
-            <label class="form-check-label" for="answer4"><p class="pergunta">Nenhuma das Alternativas</p></label>
+            <input class="form-check-input" type="radio" name="answer" id="answer4" value="Linha">
+            <label class="form-check-label" for="answer4"><p class="pergunta">Uma linha que conecta as tarefas críticas no diagrama de rede do projeto.</p></label>
         </div>
         <button class="btn btn-primary mt-3" id="checkAnswer">Verificar Resposta</button>
         <button class="btn btn-primary mt-3" id="Dica">Dica</button>
     </div>
-    <div id="cronometro">01:35</div>
+    <div id="cronometro">120:35</div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -84,11 +84,12 @@
     buttonClickObservable.subscribe(event => {
         const selectedAnswer = document.querySelector('input[name="answer"]:checked').value;
 
-        if (selectedAnswer === "ProjetoE") {
+        if (selectedAnswer === "ConjuntoV") {
             alert('Resposta correta!');
             window.location.href = "pergunta12.html";
         } else {
             alert('Resposta errada!');
+            window.location.href = "explicacao11.html";
             coracoesRestantes--;
 
             if (coracoesRestantes <= 0) {
@@ -103,7 +104,7 @@
     const dicaClickObservable = fromEvent(buttonDica, 'click');
 
     dicaClickObservable.subscribe(event => {
-        alert('1,50R$ por dica, Aceito Pix!');
+        alert('1,50R$ por dica');
     });
 
     function atualizarCronometro() {
