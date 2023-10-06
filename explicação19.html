@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Explicação da Pergunta</title>
+    <style>
+        body {
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Explicação da Pergunta</h2>
+        <hr>
+      <p>HTML (Hypertext Markup Language) não é uma linguagem de script,
+        mas sim uma linguagem de marcação usada para estruturar o conteúdo de uma página da web. 
+        HTML é responsável pela criação da estrutura básica de uma página, como cabeçalhos, parágrafos, links, imagens, etc.
+      </p>
+      <p>
+        As outras opções são incorretas e podem ser explicadas da seguinte forma:
+      </p>
+      <p>
+        JavaScript e Java são duas linguagens diferentes, não intercambiáveis.
+         JavaScript é uma linguagem de script client-side amplamente usada para 
+         interatividade em páginas da web, enquanto Java é uma linguagem de programação mais ampla e é frequentemente usada no lado do servidor.
+      </p>
+      <p>
+        PHP é uma linguagem de script server-side (não client-side)
+         comumente usada para processar dados no servidor web antes de
+          enviá-los ao navegador. Não é usada para processar dados diretamente no navegador do usuário.
+        </p>
+        <p>
+            CSS (Cascading Style Sheets) é usado principalmente para definir estilos e layout de elementos HTML em uma página da web, não possui recursos de programação e não é uma linguagem de script.
+        </p>
+        <a class="btn btn-primary" href="Pergunta19.html">Voltar ao Quiz</a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        const { fromEvent } = rxjs;
+        const button = document.getElementById('checkAnswer');
+
+        const buttonClickObservable = fromEvent(button, 'click');
+
+        buttonClickObservable.subscribe(event => {
+            const selectedAnswer = document.querySelector('input[name="answer"]:checked').value;
+
+            if (selectedAnswer === "webFramework") {
+                alert('Resposta correta!');
+
+                window.location.href = "pergunta18.html";
+            } else {
+                alert('Resposta errada! redirecionando para a explicação');
+					
+				window.location.href = "explicacao.html";
+            }
+        });
+    </script>
+
+</body>
+
+</html>
