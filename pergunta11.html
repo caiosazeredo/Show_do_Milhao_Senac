@@ -64,7 +64,7 @@
         <button class="btn btn-primary mt-3" id="checkAnswer">Verificar Resposta</button>
         <button class="btn btn-primary mt-3" id="Dica">Dica</button>
     </div>
-    <div id="cronometro">02:05</div>
+    <div id="cronometro">01:35</div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -103,7 +103,7 @@
     const dicaClickObservable = fromEvent(buttonDica, 'click');
 
     dicaClickObservable.subscribe(event => {
-        alert('1,50R$ por dica');
+        alert('1,50R$ por dica, Aceito Pix!');
     });
 
     function atualizarCronometro() {
