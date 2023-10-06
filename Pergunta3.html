@@ -6,11 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-<<<<<<< HEAD
-    <title>Quiz sobre Software livre</title>
-=======
-    <title>O que Significa TCP?</title>
->>>>>>> ba0e8665b9b140fe9d41b0d5758acf9b4e9a2fc2
+    <title>Perguntas sobre Gestão em TI</title>
     <style>
         body {
             padding: 30px;
@@ -21,46 +17,26 @@
 <body>
 
     <div class="container">
-<<<<<<< HEAD
-        <h2>Software livre</h2>
+        <h2>Gestão em Tecnologia da Informação</h2>
         <hr>
         <div class="question">
-            <p>Qual a função do sotfware livre?</p>
+            <p>O que significa a sigla ITIL?</p>
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="answer" id="answer1" value="gameEngine">
-                <label class="form-check-label" for="answer1"> Um framework para desenvolvimento web</label>
+                <label class="form-check-label" for="answer1">International Technical IT Library</label>
             </div>
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="answer" id="answer2" value="database">
-                <label class="form-check-label" for="answer2">Uma base de dados</label>
+                <label class="form-check-label" for="answer2">Integrated Technology and Infrastructure Library</label>
             </div>
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="answer" id="answer3" value="webFramework">
-                <label class="form-check-label" for="answer3">Os usuários têm a liberdade de executar o software para qualquer finalidade.</label>
+                <label class="form-check-label" for="answer3">Information Technology Infrastructure Library </label>
             </div>
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="answer" id="answer4" value="os">
-                <label class="form-check-label" for="answer4">Um sistema operacional</label>
+                <label class="form-check-label" for="answer4">Internet Technology and Integration Library</label>
             </div>
-=======
-        <h2>Pergunta sobre O que é TCP?</h2>
-        <hr>
-        <div class="question">
-            <p>O que significa TCP?</p>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="answer" id="answer1" value="a">
-                <label class="form-check-label" for="answer1">a) Transmission Control Protocol</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="answer" id="answer2" value="b">
-                <label class="form-check-label" for="answer2">b) Total Control Protocol</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="answer" id="answer3" value="c">
-                <label class="form-check-label" for="answer3">c) Transport Control Protocol</label>
-            </div>
-            
->>>>>>> ba0e8665b9b140fe9d41b0d5758acf9b4e9a2fc2
             <button class="btn btn-primary mt-3" id="checkAnswer">Verificar Resposta</button>
         </div>
     </div>
@@ -79,25 +55,14 @@
         buttonClickObservable.subscribe(event => {
             const selectedAnswer = document.querySelector('input[name="answer"]:checked').value;
 
-<<<<<<< HEAD
             if (selectedAnswer === "webFramework") {
                 alert('Resposta correta!');
 
-                window.location.href = "pergunta7.html";
+                window.location.href = "pergunta4.html";
             } else {
                 alert('Resposta errada!');
 					
-				window.location.href = "explicacao7.html";
-=======
-            if (selectedAnswer === "a") {
-                alert('Resposta correta!');
-
-                window.location.href = "Pergunta8.html";
-            } else {
-                alert('Resposta errada!');
-
-                window.location.href = "explicacao7.html";
->>>>>>> ba0e8665b9b140fe9d41b0d5758acf9b4e9a2fc2
+				window.location.href = "explicacao3.html";
             }
         });
     </script>
