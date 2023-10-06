@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Você Perdeu</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/6.6.7/rxjs.umd.min.js"></script>
+</head>
+<body style=" background-image: url(img/silvio-santos-div.jpg)">
+    
+
+    <div class="container">
+        <h2 style="color:white">Você errou 3 vezes!</h2>
+        <hr>
+        <div class="question">
+            <p style="color:white">O que você deveria fazer agora?? </p>
+            <div style="color:white" class="form-check">
+                <input class="form-check-input" type="radio" name="answer" id="answer1" value="giveup">
+                <label class="form-check-label" for="answer1">Desistir da Vida.</label>
+            </div>
+            <div style="color:white" class="form-check">
+                <input class="form-check-input" type="radio" name="answer" id="answer2" value="break">
+                <label class="form-check-label" for="answer2">Quebrar o Computador!!!</label>
+            </div>
+            <div style="color:white" class="form-check">
+                <input class="form-check-input" type="radio" name="answer" id="answer3" value="offense">
+                <label class="form-check-label" for="answer3">Xingar tudo e todos na minha frente.</label>
+            </div>
+            <div  style="color:white"class="form-check">
+                <input class="form-check-input" type="radio" name="answer" id="answer4" value="estudy">
+                <label class="form-check-label" for="answer4">Estudar mais.</label>
+            </div>
+            <button class="btn btn-danger mt-3" id="checkAnswer">Verificar Resposta</button>
+
+            <button onclick="location.href='Pergunta1.html'"   class="btn btn-success mt-3" id="botaoEscondido" style="display: none;">Tentar Novamente</button>
+
+
+            <script>
+                // Obtém referências aos botões
+                const acaoButton = document.getElementById('acaoButton');
+                const botaoEscondido = document.getElementById('botaoEscondido');
+        
+                // Adiciona um ouvinte de evento ao botão de ação
+                acaoButton.addEventListener('click', function() {
+                    // Realiza a ação desejada aqui
+                    alert('A ação foi realizada com sucesso!');
+        
+                    // Exibe o botão escondido
+                    botaoEscondido.style.display = 'block';
+                });
+            </script>
+        </div>
+    </div>
+
+    <script>
+        const { fromEvent } = rxjs;
+        const button = document.getElementById('checkAnswer');
+
+        const buttonClickObservable = fromEvent(button, 'click');
+
+        buttonClickObservable.subscribe(event => {
+            const selectedAnswer = document.querySelector('input[name="answer"]:checked').value;
+
+            if (selectedAnswer === "estudy") {
+                alert('Parabéns, continue estudando!');
+                botaoEscondido.style.display = 'block';
+                
+               
+            } else {
+                alert('Revolta não traz resultado!');
+                botaoEscondido.style.display = 'none';
+			
+            }
+        });
+    </script>
+
+
+    
+
+</body>
+</html> 

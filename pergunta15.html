@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pergunta sobre TCP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #0073e6;
+        }
+        .question {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+        .options li {
+            margin-bottom: 10px;
+        }
+        .options input[type="radio"] {
+            margin-right: 10px;
+        }
+        #result {
+            color: green;
+            font-weight: bold;
+            margin-top: 10px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pergunta sobre TCP</h1>
+    <div class="question">
+        <p>O que significa TCP?</p>
+    </div>
+    <form id="quizForm">
+        <ul class="options">
+            <li>
+                <input type="radio" name="answer" value="a">a) Transmission Control Protocol</li>
+            <li>
+                <input type="radio" name="answer" value="b">b) Total Control Protocol</li>
+            <li>
+                <input type="radio" name="answer" value="c">c) Transport Control Protocol</li>
+        </ul>
+        <br>
+        <input type="submit" value="Verificar Resposta">
+    </form>
+    <div id="result"></div>
+
+    <script>
+        document.getElementById('quizForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var selectedAnswer = document.querySelector('input[name="answer"]:checked');
+            if (selectedAnswer) {
+                var result = document.getElementById('result');
+                if (selectedAnswer.value === 'a') {
+                    result.style.color = 'green';
+                    result.textContent = 'Resposta correta! TCP significa Transmission Control Protocol.';
+                    window.location.href = "pergunta16.html";
+                } else {
+                    alert('Resposta errada!');
+
+                 window.location.href = "explicacao15.html";
+            }
+                result.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>

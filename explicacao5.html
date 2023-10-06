@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Explicação sobre Virtualização de Computadores</title>
+    <style>
+        body {
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Explicação sobre Virtualização de Computadores</h2>
+        <hr>
+        <p>A virtualização de computadores é uma técnica poderosa que permite a criação de ambientes virtuais isolados em um único sistema físico. Isso é alcançado por meio do uso de um software chamado "hipervisor" ou "gerenciador de máquinas virtuais".</p>
+
+        <p>Em essência, uma máquina virtual é uma emulação de um sistema de computador, incluindo hardware e software, dentro de outro sistema. Essa abordagem oferece várias vantagens, como:</p>
+
+        <ul>
+            <li>Isolamento: As máquinas virtuais são isoladas umas das outras, o que significa que um problema em uma máquina virtual não afeta as outras.</li>
+            <li>Consolidação: Vários sistemas virtuais podem ser executados em um único servidor físico, economizando recursos.</li>
+            <li>Testes e Desenvolvimento: É possível criar ambientes de teste e desenvolvimento facilmente replicáveis.</li>
+            <li>Compatibilidade: Máquinas virtuais podem ser configuradas para executar sistemas operacionais diferentes em um único hardware.</li>
+        </ul>
+
+        <p>Portanto, a virtualização desempenha um papel fundamental na gestão de recursos de TI, na redução de custos e na simplificação das operações de TI em empresas e organizações.</p>
+
+        <a class="btn btn-primary mt-3" href="Pergunta5.html">Voltar para a Pergunta</a>
+    </div>
+    
+</body>
+
+<script>
+    const { fromEvent } = rxjs;
+    const button = document.getElementById('checkAnswer');
+
+    const buttonClickObservable = fromEvent(button, 'click');
+
+buttonClickObservable.subscribe(event => {
+    const selectedAnswer = document.querySelector('input[name="answer"]:checked').value;
+
+    if (selectedAnswer === "correta") {
+        alert('Resposta correta!');
+        window.location.href = "pergunta6.html";
+    } else {
+        alert('Resposta errada! Redirecionando para a explicação...');
+        window.location.href = "explicacao5.html";
+    }
+});
+
+</script>
+
+</html>
+
